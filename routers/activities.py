@@ -29,7 +29,7 @@ def enroll_activity(headers: dict, activity_id: int):
 
 @router.get("/banners")
 def get_banners():
-    banner= get_banner()
+    banners= get_banners()
 
-    return {"success": True, "data": banner}
+    return {"success": True, "data": banners}
 

@@ -28,7 +28,7 @@ def get_header(activity_id: int):
 
     return{"Authorization": f"Bearer {"token"}"}
 
-def get_banner():
+def get_banners():
     """
     获取banner数据
     """
