@@ -20,3 +20,30 @@ def get_activity_by_id(activity_id: int):
 
     return {"message": f"Activity {activity_id} endpoint"}
 
+def get_postsInformation_by_postsId(postId:str):
+    """
+    根据帖子ID获取帖子详情
+    """
+
+    json={
+    "success": True,
+    "data": {
+        "list": [
+        {
+            "id": "评论ID",
+            "user": {
+            "id": "用户ID",
+            "name": "用户名",
+            "avatar": "头像URL"
+            },
+            "content": "评论内容",
+            "createTime": "发布时间",
+            "likeCount": bool,
+            "isLiked": bool
+        },
+        ],
+            "total":int,
+            "hasMore": bool
+        }
+    }
+    return json
