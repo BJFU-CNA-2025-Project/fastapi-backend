@@ -8,7 +8,7 @@ def get_activities():
     # 从数据库获取活动数据
 
 
-    return {"message": "Activities endpoint"}
+    return {"message": "Activities endpoint "}
 
 
 def get_activity_by_id(activity_id: int):
