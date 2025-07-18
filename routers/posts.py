@@ -68,7 +68,7 @@ def handle_like(postId:str, userId:str, isLike:bool):
             "success": False,
             "content": "You have already liked this post.",
         }
-    else
+    else :
         post_information["likeCount"] += 1
         post_information["isLiked"] = 1
         like_comment(userId, post_information)
