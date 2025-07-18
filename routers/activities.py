@@ -8,6 +8,9 @@ router = APIRouter()
 def get_activities():
     activities = get_activities()
 
+    if not activities:
+        return {"success": False, "message": "Activities not found"}
+
     return {"success": True, "data": activities}
 
 @router.get("/{activity_id}")
@@ -19,13 +22,11 @@ def get_activity(activity_id: int):
 
     return {"success": True, "data": activity}
 
+#需要请求头
 @router.post("/{activity_id}/enroll")
-def enroll_activity(headers: dict, activity_id: int):
-    header=get_header(activity_id)
-    if not header:
-        return {"success": False, "message": "Header not found"}
+def enroll_activity( activity_id: int):
 
-    return {"success": True, "data": header}
+    return {"success": True}
 
 @router.get("/banners")
 def get_banners():
