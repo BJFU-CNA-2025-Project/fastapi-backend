@@ -358,3 +358,4 @@ class activity_service:
             return handle_db_error(e)
         finally:
             cursor.close()
+

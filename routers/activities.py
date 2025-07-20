@@ -19,3 +19,16 @@ def get_activity(activity_id: int):
 
     return {"success": True, "data": activity}
 
+@router.post("/{activity_id}/enroll")
+def enroll_activity(headers: dict, activity_id: int):
+    header=get_header(activity_id)
+    if not header:
+        return {"success": False, "message": "Header not found"}
+
+    return {"success": True, "data": header}
+
+@router.get("/banners")
+def get_banners():
+    banner= get_banner()
+
+    return {"success": True, "data": banner}
